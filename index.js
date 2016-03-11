@@ -46,6 +46,9 @@ const getOutput = (argv) => {
 }
 
 const getMethod = (argv) => {
+  if (!argv[0]) {
+    return new Error()
+  }
   return argv[0].replace(/--?/, '')
 }
 
