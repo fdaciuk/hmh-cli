@@ -1,10 +1,12 @@
 {
   "name": "hmh-cli",
   "version": "0.0.0",
-  "description": "",
+  "description": "How many hours? Calculate hours easily, direct on console",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "standard --verbose | snazzy",
+    "pretest": "npm run lint",
+    "test": "node test/hmh-cli-test.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,16 @@
   "bugs": {
     "url": "https://github.com/fdaciuk/hmh-cli/issues"
   },
-  "homepage": "https://github.com/fdaciuk/hmh-cli#readme"
+  "homepage": "https://github.com/fdaciuk/hmh-cli#readme",
+  "preferGlobal": true,
+  "bin": {
+    "hmh": "index.js"
+  },
+  "dependencies": {
+    "hmh": "^1.0.2"
+  },
+  "devDependencies": {
+    "snazzy": "^3.0.0",
+    "standard": "^6.0.8"
+  }
 }
