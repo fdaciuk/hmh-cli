@@ -1,6 +1,6 @@
 {
   "name": "hmh-cli",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "How many hours? Calculate hours easily, direct on console",
   "main": "index.js",
   "scripts": {
