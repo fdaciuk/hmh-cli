@@ -25,7 +25,7 @@
     "hmh": "index.js"
   },
   "dependencies": {
-    "hmh": "^1.0.4"
+    "hmh": "^1.0.5"
   },
   "devDependencies": {
     "snazzy": "^3.0.0",
