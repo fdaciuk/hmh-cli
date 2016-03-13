@@ -12,12 +12,12 @@ const help = `
     $ hmh <option> <time> <output>
 
   Options:
-    -h, --help                      Show this help
-    -v, --version                   Show hmh and hmh-cli version
-    +, --sum <time>                    Calculate hours, summing time spaces
-    -, --sub <time>                    Calculate hours, subtracting time spaces
-    %, --diff <firstTime> <SecondTime> Calculate the difference between two time spaces
-    /, --div <time> <divisor>          Divide a time space into a number, passed as 'divisor'.
+    -h, --help                           Show this help
+    -v, --version                        Show hmh and hmh-cli version
+    +, --sum <time>                      Calculate hours, summing time spaces
+    -, --sub <time>                      Calculate hours, subtracting time spaces
+    %, --diff <firstTime> <SecondTime>   Calculate the difference between two time spaces
+    /, --div <time> <divisor>            Divide a time space into a number, passed as 'divisor'.
 
   Example
     $ hmh --sum 10m 20m 30m 1h 25m
