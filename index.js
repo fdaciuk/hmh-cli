@@ -8,16 +8,16 @@ const hmhPkg = require('hmh/package.json')
 const args = process.argv.slice(2)
 
 const help = `
-  Usage
+  Usage:
     $ hmh <option> <time> <output>
 
-  Options
+  Options:
     -h, --help                      Show this help
     -v, --version                   Show hmh and hmh-cli version
-    --sum <time>                    Calculate hours, summing time spaces
-    --sub <time>                    Calculate hours, subtracting time spaces
-    --diff <firstTime> <SecondTime> Calculate the difference between two time spaces
-    --div <time> <divisor>          Divide a time space into a number, passed as 'divisor'.
+    +, --sum <time>                    Calculate hours, summing time spaces
+    -, --sub <time>                    Calculate hours, subtracting time spaces
+    %, --diff <firstTime> <SecondTime> Calculate the difference between two time spaces
+    /, --div <time> <divisor>          Divide a time space into a number, passed as 'divisor'.
 
   Example
     $ hmh --sum 10m 20m 30m 1h 25m
@@ -49,7 +49,16 @@ const getMethod = (argv) => {
   if (!argv[0]) {
     return new Error()
   }
-  return argv[0].replace(/--?/, '')
+  let option = argv[0]
+  if (option.length > 1) {
+    option = option.replace(/--?/, '')
+  }
+  return {
+    '+': 'sum',
+    '-': 'sub',
+    '/': 'div',
+    '%': 'diff'
+  }[option] || option
 }
 
 const getValues = (argv) => {
