@@ -81,11 +81,11 @@ try {
 
     case 'diff':
     case 'div':
-      console.log(hmh[method](values[0], values[1], output))
+      console.log(hmh[method](values[0], values[1], output).toString())
       break
 
     default:
-      console.log(hmh[method](values, output))
+      console.log(hmh[method](values, output).toString())
   }
 } catch (e) {
   console.log(help)
